@@ -21,7 +21,7 @@ function getHumanChoice(){
     if (humanChoice === "paper") return "Paper";
     if (humanChoice === "scissors") return "Scissors";
     else{
-        getHumanChoice();
+        return getHumanChoice();
     }
 }
 
