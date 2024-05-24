@@ -39,3 +39,13 @@ function playRound(humanChoice, computerChoice){
         console.log(`You won! ${humanChoice} beats ${computerChoice}.`)
         console.log(`Computer: ${computerScore} Human: ${++humanScore}.`)    }
 }
+
+function playGame(){
+    while (computerScore < 5 && humanScore < 5){
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+    }
+}
+
+playGame();
