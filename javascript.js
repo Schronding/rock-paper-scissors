@@ -24,3 +24,18 @@ function getHumanChoice(){
         getHumanChoice();
     }
 }
+
+function playRound(humanChoice, computerChoice){
+    if (humanChoice === computerChoice){
+        console.log("It is a tie! Try again");
+    }
+    else if (humanChoice === "Rock" && computerChoice === "Paper" ||
+    humanChoice === "Paper" && computerChoice === "Scissors" ||
+    humanChoice === "Scissors" && computerChoice === "Rock") {
+        console.log(`You lose! ${humanChoice} is beaten by ${computerChoice}.`)
+        console.log(`Computer: ${++computerScore} Human: ${humanScore}.`)
+    }
+    else {
+        console.log(`You won! ${humanChoice} beats ${computerChoice}.`)
+        console.log(`Computer: ${computerScore} Human: ${++humanScore}.`)    }
+}
